@@ -1,0 +1,28 @@
+---
+description: An inline message banner for info, success, warnings and errors.
+labels: ['react', 'ui', 'alert', 'feedback', 'design']
+---
+
+`Alert` shows an inline message with an optional `title`. `negative` and `warning` tones render `role="alert"` so screen readers announce them right away; `info` (the default) and `positive` render the polite `role="status"`.
+
+## An error
+
+```tsx
+import { Alert } from '@acme-modular/design.ui.alert';
+
+<Alert tone="negative" title="Payment declined">
+  Your card was declined. Try another card.
+</Alert>
+```
+
+## A hint
+
+```tsx
+<Alert>Add {remaining} more items for 10% off.</Alert>
+```
+
+## A success message
+
+```tsx
+<Alert tone="positive" title="Order placed">We emailed your receipt.</Alert>
+```

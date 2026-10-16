@@ -1,0 +1,31 @@
+---
+description: The ACME button, in primary, secondary and ghost variants.
+labels: ['react', 'ui', 'button', 'design']
+---
+
+The ACME button. Use one `primary` button per view for the main action, `secondary` for alternatives and `ghost` for low-emphasis actions.
+
+## Main action
+
+```tsx
+import { Button } from '@acme-modular/design.ui.button';
+
+<Button onClick={addToCart}>Add to cart</Button>
+```
+
+## Variants
+
+```tsx
+<Button variant="secondary">Save for later</Button>
+<Button variant="ghost">Remove</Button>
+```
+
+## Form submit
+
+`type` defaults to `button`, so a button inside a form never submits by accident. Opt in explicitly:
+
+```tsx
+<form onSubmit={placeOrder}>
+  <Button type="submit" fullWidth>Place order</Button>
+</form>
+```

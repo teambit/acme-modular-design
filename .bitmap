@@ -9,5 +9,102 @@
  */
 
 {
-    "$schema-version": "17.0.0"
+    "theme/acme-theme": {
+        "name": "theme/acme-theme",
+        "scope": "acme-modular.design",
+        "version": "53fc48e729e9d14c78a253bc3c9f86a3d3aeb5ad",
+        "mainFile": "index.ts",
+        "rootDir": "design/theme/acme-theme",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/alert": {
+        "name": "ui/alert",
+        "scope": "acme-modular.design",
+        "version": "caccf4f626c31e4a8eaf8f86f0054db5d69020fb",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/alert",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/badge": {
+        "name": "ui/badge",
+        "scope": "acme-modular.design",
+        "version": "b3819cc0e8df8248fa194cd73e5e4284f4c2c68d",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/badge",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/button": {
+        "name": "ui/button",
+        "scope": "acme-modular.design",
+        "version": "0e1993fa1e36a60585ee65afe16f2148dcfe4ff1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/button",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/card": {
+        "name": "ui/card",
+        "scope": "acme-modular.design",
+        "version": "7617661bc0cbebae732c2c9da00028002fba3f4c",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/card",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/modal": {
+        "name": "ui/modal",
+        "scope": "acme-modular.design",
+        "version": "719ad306f349d9b2bd6751cbfba915c870ce13a9",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/modal",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/price-tag": {
+        "name": "ui/price-tag",
+        "scope": "acme-modular.design",
+        "version": "de5e283b85ac9a664cc59f8f4ee857ba47a4a349",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/price-tag",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/spinner": {
+        "name": "ui/spinner",
+        "scope": "acme-modular.design",
+        "version": "f20a54a110946d8c0e4ccb5ceb48fac577237899",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/spinner",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/stack": {
+        "name": "ui/stack",
+        "scope": "acme-modular.design",
+        "version": "99002c76201d27937a1a6043bbe9d6044849d7e3",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/stack",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "ui/text-input": {
+        "name": "ui/text-input",
+        "scope": "acme-modular.design",
+        "version": "f1f14bc16d26efe2651b5548bba1f35d3dceebc6",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/text-input",
+        "onLanesOnly": true,
+        "isAvailableOnCurrentLane": true
+    },
+    "$schema-version": "17.0.0",
+    "_bit_lane": {
+        "id": {
+            "name": "org-scale-content",
+            "scope": "acme-modular.platform"
+        },
+        "exported": true
+    }
 }

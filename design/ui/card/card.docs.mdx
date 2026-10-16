@@ -1,0 +1,43 @@
+---
+description: A surface that groups related content, such as a product, an order or an address.
+labels: ['react', 'ui', 'card', 'design']
+---
+
+`Card` is the ACME content surface. It has optional slots for full-bleed `media`, a `title`, the body and a `footer` for prices and actions. Pass `onClick` to make the whole card clickable and keyboard-focusable; clicks on nested buttons keep their own behavior and don't trigger the card.
+
+## A product
+
+```tsx
+import { Card } from '@acme-modular/design.ui.card';
+import { PriceTag } from '@acme-modular/design.ui.price-tag';
+import { Button } from '@acme-modular/design.ui.button';
+
+<Card
+  media={<img src={product.imageUrl} alt="" />}
+  title={product.name}
+  footer={
+    <>
+      <PriceTag cents={product.price.amountCents} />
+      <Button onClick={() => addToCart(product)}>Add to cart</Button>
+    </>
+  }
+>
+  {product.description}
+</Card>
+```
+
+## A clickable card
+
+```tsx
+<Card title="Corner Desk" onClick={() => navigate('/products/corner-desk')}>
+  L-shaped oak desk for two monitors.
+</Card>
+```
+
+## A plain container
+
+```tsx
+<Card title="Office address">
+  500 Congress Ave, Floor 9, Austin, TX 78701
+</Card>
+```
