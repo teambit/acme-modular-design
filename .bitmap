@@ -40,7 +40,7 @@
     "ui/card": {
         "name": "ui/card",
         "scope": "acme-modular.design",
-        "version": "7617661bc0cbebae732c2c9da00028002fba3f4c",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "design/ui/card"
     },
@@ -61,7 +61,7 @@
     "ui/spinner": {
         "name": "ui/spinner",
         "scope": "acme-modular.design",
-        "version": "f20a54a110946d8c0e4ccb5ceb48fac577237899",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "design/ui/spinner"
     },
