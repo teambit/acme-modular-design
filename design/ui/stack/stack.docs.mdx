@@ -1,0 +1,34 @@
+---
+description: Lays children out in a row or a column with theme spacing.
+labels: ['react', 'ui', 'layout', 'stack', 'design']
+---
+
+`Stack` is a flexbox layout primitive. It stacks children in a `column` (default) or a `row`, spaced by the theme spacing scale (`small`, `medium`, `large`, `xl`), with optional `align`, `justify` and `wrap`.
+
+## A vertical list
+
+```tsx
+import { Stack } from '@acme-modular/design.ui.stack';
+
+<Stack gap="large">
+  {lines.map((line) => <CartLineItem key={line.productId} line={line} />)}
+</Stack>
+```
+
+## A row of actions
+
+```tsx
+<Stack direction="row" gap="small" justify="flex-end">
+  <Button variant="ghost">Back to cart</Button>
+  <Button>Place order</Button>
+</Stack>
+```
+
+## Label and value
+
+```tsx
+<Stack direction="row" justify="space-between" align="center">
+  <span>Subtotal</span>
+  <PriceTag cents={summary.subtotalCents} />
+</Stack>
+```

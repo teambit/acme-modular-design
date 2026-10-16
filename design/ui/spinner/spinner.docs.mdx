@@ -1,0 +1,23 @@
+---
+description: An indeterminate loading indicator with an accessible label.
+labels: ['react', 'ui', 'spinner', 'loading', 'design']
+---
+
+`Spinner` shows that something is loading. It renders `role="status"` with an accessible `label` (defaults to "Loading"), so screen readers announce what is happening.
+
+## While data loads
+
+```tsx
+import { Spinner } from '@acme-modular/design.ui.spinner';
+
+const { data, loading } = useProducts();
+if (loading) return <Spinner label="Loading products" />;
+```
+
+## Inside a button
+
+```tsx
+<Button disabled>
+  <Spinner size="small" label="Placing order" /> Placing order
+</Button>
+```
