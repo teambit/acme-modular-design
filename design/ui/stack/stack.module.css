@@ -1,0 +1,31 @@
+.stack {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.small {
+  gap: var(--spacing-small, 4px);
+}
+
+.medium {
+  gap: var(--spacing-medium, 8px);
+}
+
+.large {
+  gap: var(--spacing-large, 16px);
+}
+
+.xl {
+  gap: var(--spacing-xl, 24px);
+}

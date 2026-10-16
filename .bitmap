@@ -9,5 +9,75 @@
  */
 
 {
+    "theme/acme-theme": {
+        "name": "theme/acme-theme",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/theme/acme-theme"
+    },
+    "ui/alert": {
+        "name": "ui/alert",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/alert"
+    },
+    "ui/badge": {
+        "name": "ui/badge",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/badge"
+    },
+    "ui/button": {
+        "name": "ui/button",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/button"
+    },
+    "ui/card": {
+        "name": "ui/card",
+        "scope": "acme-modular.design",
+        "version": "7617661bc0cbebae732c2c9da00028002fba3f4c",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/card"
+    },
+    "ui/modal": {
+        "name": "ui/modal",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/modal"
+    },
+    "ui/price-tag": {
+        "name": "ui/price-tag",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/price-tag"
+    },
+    "ui/spinner": {
+        "name": "ui/spinner",
+        "scope": "acme-modular.design",
+        "version": "f20a54a110946d8c0e4ccb5ceb48fac577237899",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/spinner"
+    },
+    "ui/stack": {
+        "name": "ui/stack",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/stack"
+    },
+    "ui/text-input": {
+        "name": "ui/text-input",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/text-input"
+    },
     "$schema-version": "17.0.0"
 }

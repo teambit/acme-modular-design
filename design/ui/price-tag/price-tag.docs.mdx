@@ -1,0 +1,26 @@
+---
+description: Renders a price from integer cents, with an optional compare-at price.
+labels: ['react', 'ui', 'price', 'design']
+---
+
+`PriceTag` renders money from integer cents using the platform `formatPrice` util, so every scope shows prices the same way.
+
+## A price
+
+```tsx
+import { PriceTag } from '@acme-modular/design.ui.price-tag';
+
+<PriceTag cents={product.price.amountCents} />
+```
+
+## A discount
+
+```tsx
+<PriceTag cents={35910} compareAtCents={39900} size="large" />
+```
+
+## Another currency
+
+```tsx
+<PriceTag cents={12900} currency="EUR" />
+```

@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--colors-surface-primary, #fff);
+  color: var(--colors-text-primary, #212121);
+  border: var(--borders-default-width, 1px) solid var(--borders-default-color, #e0e0e0);
+  border-radius: var(--borders-radius-medium, 8px);
+  box-shadow: var(--effects-shadows-xs, 0 1px 2px rgba(0, 0, 0, 0.08));
+}
+
+.clickable {
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.clickable:hover {
+  box-shadow: var(--effects-shadows-medium, 0 4px 8px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+.clickable:focus-visible {
+  outline: var(--borders-focus-width, 2px) solid var(--borders-focus-color, #0b5fff);
+  outline-offset: var(--borders-focus-offset, 2px);
+}
+
+.media {
+  background: var(--colors-surface-secondary, #f0f0f5);
+}
+
+/* media is full-bleed, so images fill the top of the card. */
+.media > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium, 8px);
+  padding: var(--spacing-large, 16px);
+  flex: 1;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--typography-sizes-heading-h5, 18px);
+  font-weight: var(--typography-font-weight-semi-bold, 600);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium, 8px);
+  padding: var(--spacing-medium, 8px) var(--spacing-large, 16px);
+  border-top: var(--borders-default-width, 1px) solid var(--borders-default-color, #e0e0e0);
+}

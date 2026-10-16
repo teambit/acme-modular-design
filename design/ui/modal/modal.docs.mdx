@@ -1,0 +1,35 @@
+---
+description: An accessible modal dialog that closes on Escape and on an overlay click.
+labels: ['react', 'ui', 'modal', 'dialog', 'design']
+---
+
+`Modal` is a controlled dialog. It renders nothing while `open` is false. When open, it renders a fixed-position overlay with `role="dialog"`, `aria-modal="true"` and `aria-label={title}`, moves focus into the dialog, and calls `onClose` on Escape, on an overlay click and on its close button.
+
+## Confirm a destructive action
+
+```tsx
+import { Modal } from '@acme-modular/design.ui.modal';
+import { Button } from '@acme-modular/design.ui.button';
+
+<Modal
+  open={confirming}
+  onClose={() => setConfirming(false)}
+  title="Remove Standing Desk from cart?"
+  footer={
+    <>
+      <Button variant="secondary" onClick={() => setConfirming(false)}>Keep it</Button>
+      <Button onClick={() => remove('p-100')}>Remove</Button>
+    </>
+  }
+>
+  You can add it back at any time.
+</Modal>
+```
+
+## Informational content
+
+```tsx
+<Modal open={open} onClose={close} title="Shipping policy">
+  Orders over $500 ship free within the continental US.
+</Modal>
+```

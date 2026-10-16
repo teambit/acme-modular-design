@@ -1,0 +1,30 @@
+---
+description: A labelled text field with an accessible error message.
+labels: ['react', 'ui', 'form', 'input', 'design']
+---
+
+`TextInput` is a controlled text field. It always renders a `<label>` bound to the input, calls `onChange` with the string value (not the event), and renders `error` under the input with `role="alert"`, linked through `aria-describedby`.
+
+## A shipping address field
+
+```tsx
+import { TextInput } from '@acme-modular/design.ui.text-input';
+
+const [line1, setLine1] = useState('');
+
+<TextInput label="Street address" value={line1} onChange={setLine1} autoComplete="address-line1" required />
+```
+
+## Validation
+
+```tsx
+const error = /^\d{5}$/.test(zip) ? undefined : 'Enter a 5-digit ZIP code.';
+
+<TextInput label="ZIP code" value={zip} onChange={setZip} inputMode="numeric" error={error} />
+```
+
+## Email
+
+```tsx
+<TextInput label="Email" type="email" value={email} onChange={setEmail} autoComplete="email" />
+```

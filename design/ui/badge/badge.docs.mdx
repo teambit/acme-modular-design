@@ -1,0 +1,27 @@
+---
+description: A small status label for stock levels, order statuses and tags.
+labels: ['react', 'ui', 'badge', 'status', 'design']
+---
+
+`Badge` is a short status label. Pick a `tone` for its meaning (`neutral`, `positive`, `negative`, `warning` or `info`); the label text always carries the meaning too, so the badge never relies on color alone.
+
+## Stock level
+
+```tsx
+import { Badge } from '@acme-modular/design.ui.badge';
+
+{product.inStock ? <Badge tone="positive">In stock</Badge> : <Badge tone="negative">Out of stock</Badge>}
+```
+
+## Order status
+
+```tsx
+<Badge tone="info">Processing</Badge>
+<Badge tone="positive">Delivered</Badge>
+```
+
+## A tag
+
+```tsx
+<Badge>Bestseller</Badge>
+```
