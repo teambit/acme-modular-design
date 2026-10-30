@@ -1,0 +1,74 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small, 4px);
+}
+
+.label {
+  font-size: var(--typography-sizes-body-small, 14px);
+  font-weight: var(--typography-font-weight-medium, 500);
+  color: var(--colors-text-primary, #212121);
+}
+
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  font: inherit;
+  font-size: var(--typography-sizes-body-medium, 16px);
+  padding: var(--spacing-medium, 8px) calc(var(--spacing-large, 16px) + 24px) var(--spacing-medium, 8px) var(--spacing-medium, 8px);
+  color: var(--colors-text-primary, #212121);
+  background: var(--colors-surface-primary, #fff);
+  border: var(--borders-default-width, 1px) solid var(--borders-default-color, #e0e0e0);
+  border-radius: var(--borders-radius-small, 4px);
+  appearance: none;
+  text-overflow: ellipsis;
+  cursor: var(--interactions-cursor-pointer, pointer);
+  transition: border-color var(--interactions-transitions-duration-fast, 150ms) var(--interactions-transitions-easing-ease-out, ease-out);
+}
+
+.select:hover:not(:disabled) {
+  border-color: var(--colors-text-secondary, #666);
+}
+
+.empty {
+  color: var(--colors-text-secondary, #666);
+}
+
+.select option {
+  color: var(--colors-text-primary, #212121);
+}
+
+.select:focus-visible {
+  outline: var(--borders-focus-width, 2px) solid var(--borders-focus-color, #0b5fff);
+  outline-offset: var(--borders-focus-offset, 2px);
+}
+
+.select:disabled {
+  opacity: var(--effects-opacity-disabled, 0.5);
+  cursor: var(--interactions-cursor-disabled, not-allowed);
+}
+
+.invalid {
+  border-color: var(--colors-status-negative-default, #f44336);
+}
+
+.chevron {
+  position: absolute;
+  right: var(--spacing-medium, 8px);
+  pointer-events: none;
+  color: var(--colors-text-secondary, #666);
+}
+
+.error {
+  margin: 0;
+  font-size: var(--typography-sizes-body-small, 14px);
+  color: var(--colors-status-negative-default, #f44336);
+}

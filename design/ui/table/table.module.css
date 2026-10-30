@@ -1,0 +1,180 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  font-family: var(--typography-font-family);
+  color: var(--colors-text-default);
+  background-color: var(--colors-surface-primary);
+  border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  border-radius: var(--borders-radius-large);
+}
+
+.table {
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--typography-sizes-body-default);
+  line-height: var(--typography-line-height-base);
+}
+
+.headCell {
+  box-sizing: border-box;
+  padding: var(--spacing-medium) var(--spacing-large);
+  background-color: var(--colors-surface-secondary);
+  color: var(--colors-text-secondary);
+  font-size: var(--typography-sizes-caption-medium);
+  font-weight: var(--typography-font-weight-semi-bold);
+  letter-spacing: var(--typography-letter-spacing-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+}
+
+.cell {
+  box-sizing: border-box;
+  padding: var(--spacing-medium) var(--spacing-large);
+  color: var(--colors-text-primary);
+  vertical-align: middle;
+  border-bottom: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+}
+
+.row {
+  transition: background-color var(--interactions-transitions-duration-fast) var(--interactions-transitions-easing-ease-out);
+}
+
+.body .row:last-child .cell {
+  border-bottom: none;
+}
+
+.clickable {
+  cursor: var(--interactions-cursor-pointer);
+}
+
+.clickable:hover {
+  background-color: var(--colors-surface-secondary);
+}
+
+.clickable:focus-visible {
+  outline: var(--borders-focus-width) var(--borders-focus-style) var(--borders-focus-color);
+  outline-offset: calc(var(--borders-focus-width) * -1);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.value {
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  box-sizing: border-box;
+  padding: var(--spacing-xl) var(--spacing-large);
+  text-align: center;
+  color: var(--colors-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    overflow: visible;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  .table,
+  .body,
+  .row,
+  .emptyRow,
+  .empty {
+    display: block;
+    width: 100%;
+  }
+
+  .head {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+  }
+
+  .row {
+    box-sizing: border-box;
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--colors-surface-primary);
+    border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+    border-radius: var(--borders-radius-large);
+    box-shadow: var(--effects-shadows-xs);
+  }
+
+  .emptyRow {
+    background-color: var(--colors-surface-primary);
+    border: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+    border-radius: var(--borders-radius-large);
+  }
+
+  .cell {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-small) 0;
+    text-align: right;
+    border-bottom: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  }
+
+  .body .row:last-child .cell {
+    border-bottom: var(--borders-default-width) var(--borders-default-style) var(--borders-default-color);
+  }
+
+  .row .cell:last-child,
+  .body .row:last-child .cell:last-child {
+    border-bottom: none;
+  }
+
+  .cell::before {
+    content: attr(data-label);
+    flex: 0 0 40%;
+    min-width: 0;
+    text-align: left;
+    color: var(--colors-text-secondary);
+    font-size: var(--typography-sizes-caption-medium);
+    font-weight: var(--typography-font-weight-semi-bold);
+    letter-spacing: var(--typography-letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
+  .value {
+    min-width: 0;
+    flex: 1 1 auto;
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .headCell,
+  .cell {
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: var(--typography-sizes-body-small);
+  }
+}
