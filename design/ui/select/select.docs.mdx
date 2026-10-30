@@ -1,0 +1,55 @@
+---
+description: "A labelled native select styled to match the text input, with an accessible error message and a 44px minimum touch height."
+labels: ["select", "form", "input"]
+---
+
+A native `<select>` with the same label, border, focus ring and error pattern as the text input. The label is bound with `htmlFor`, and `onChange` receives the chosen value rather than the event.
+
+## Basic usage
+
+```tsx
+<Select
+  label="Shipping method"
+  options={[
+    { value: 'standard', label: 'Standard (3-5 business days)' },
+    { value: 'express', label: 'Express (1-2 business days)' },
+  ]}
+  value="standard"
+  onChange={(value) => console.log(value)}
+/>
+```
+
+## Placeholder and error
+
+Pass a `placeholder` to show an unselectable first option while `value` is empty. An `error` is announced with `role="alert"`, sets `aria-invalid` and is linked through `aria-describedby`.
+
+```tsx
+<Select
+  label="Country"
+  options={[
+    { value: 'us', label: 'United States' },
+    { value: 'ca', label: 'Canada' },
+  ]}
+  value=""
+  onChange={() => {}}
+  placeholder="Choose a country"
+  error="Select a country to continue."
+/>
+```
+
+## Disabled options and select
+
+Set `disabled` on an option to make it unavailable, or on the select to disable the whole field.
+
+```tsx
+<Select
+  label="Delivery"
+  options={[
+    { value: 'home', label: 'Home delivery' },
+    { value: 'pickup', label: 'In-store pickup', disabled: true },
+  ]}
+  value="home"
+  onChange={() => {}}
+  disabled
+/>
+```

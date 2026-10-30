@@ -58,6 +58,13 @@
         "mainFile": "index.ts",
         "rootDir": "design/ui/price-tag"
     },
+    "ui/select": {
+        "name": "ui/select",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/select"
+    },
     "ui/spinner": {
         "name": "ui/spinner",
         "scope": "acme-modular.design",
@@ -71,6 +78,13 @@
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "design/ui/stack"
+    },
+    "ui/table": {
+        "name": "ui/table",
+        "scope": "acme-modular.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/ui/table"
     },
     "ui/text-input": {
         "name": "ui/text-input",

@@ -1,0 +1,71 @@
+---
+description: "A responsive data table that renders a semantic table on tablet and desktop and collapses each row into a stacked card under 768px."
+labels: ["table", "data", "responsive", "ui"]
+---
+
+The `Table` component renders typed rows against a list of columns. On tablet and desktop it is a semantic `<table>` styled with theme tokens. Under 768px each row becomes a card of header and value pairs, so nothing overflows down to 320px.
+
+## Basic usage
+
+Describe the columns and pass the rows. Use `rowKey` to give each row a stable key.
+
+```tsx
+type Order = { id: string; customer: string; status: string };
+
+const columns = [
+  { key: `id`, header: `Order` },
+  { key: `customer`, header: `Customer` },
+  { key: `status`, header: `Status` },
+];
+
+const rows: Order[] = [
+  { id: `ORD-1042`, customer: `Maya Levi`, status: `Delivered` },
+  { id: `ORD-1043`, customer: `Daniel Cohen`, status: `Processing` },
+];
+
+export const Example = () => (
+  <Table columns={columns} rows={rows} rowKey={(row) => row.id} />
+);
+```
+
+## Custom cells and alignment
+
+Use `render` to format a cell and `align` to align numeric columns.
+
+```tsx
+type Order = { id: string; totalCents: number };
+
+const columns = [
+  { key: `id`, header: `Order` },
+  {
+    key: `total`,
+    header: `Total`,
+    align: `right` as const,
+    render: (row: Order) => `$${(row.totalCents / 100).toFixed(2)}`,
+  },
+];
+
+export const Example = () => (
+  <Table
+    columns={columns}
+    rows={[{ id: `ORD-1042`, totalCents: 12850 }]}
+    rowKey={(row) => row.id}
+  />
+);
+```
+
+## Clickable rows and empty state
+
+Pass `onRowClick` to make rows interactive, with keyboard support. When `rows` is empty, `emptyMessage` is shown.
+
+```tsx
+export const Example = () => (
+  <Table
+    columns={[{ key: `name`, header: `Name` }]}
+    rows={[]}
+    rowKey={(row: { name: string }) => row.name}
+    emptyMessage="No customers found."
+    onRowClick={(row) => console.log(row.name)}
+  />
+);
+```
